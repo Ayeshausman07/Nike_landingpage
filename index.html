@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Shoes</title>
     <link rel="icon" href="https://i.pinimg.com/736x/33/73/b3/3373b308935a205a905ced4d3d45bc73.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="logo ">
             <img src="assets/images/brand_logo (2).png" alt="Nike Logo">
         </div>
         <nav>
-            <ul>
+            <div class="openmenu"><i class="fa-solid fa-bars"></i></div>
+            <ul class="mainmenu">
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Location</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <div class="closemenu"><i class="fas fa-times"></i></div>
             </ul>
         </nav>
         <button class="login-btn">Login</button>
@@ -43,5 +47,31 @@
             <img src="assets/images/shoe_image (3).png" alt="Nike Shoe">
         </div>
     </main>
+
+    <script>
+        const mainmenu = document.querySelector('.mainmenu');
+        const closemenu = document.querySelector('.closemenu');
+        const openmenu = document.querySelector('.openmenu');
+    
+        // Add event listeners for opening and closing the menu
+        openmenu.addEventListener('click', showMenu);
+        closemenu.addEventListener('click', closeMenu);
+    
+        function showMenu() {
+            mainmenu.style.display = 'flex'; // Make the menu visible
+            setTimeout(() => {
+                mainmenu.style.top = '0'; // Slide the menu back to its original position
+            }, 10); // A small delay ensures the transition is triggered
+        }
+    
+        function closeMenu() {
+            mainmenu.style.top = '-100%'; // Slide the menu off-screen
+            setTimeout(() => {
+                mainmenu.style.display = 'flex'; // Hide the menu completely after the animation
+            }, 300); // Adjust this delay to match your CSS transition duration
+        }
+    </script>
+    
+    
 </body>
 </html>

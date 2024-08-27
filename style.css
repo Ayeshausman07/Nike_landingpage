@@ -38,6 +38,17 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
 .login-btn {
     background-color:#d01c28;
     color: #fff;
@@ -53,7 +64,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background-color: #f7f7f7;
+    background-color: white;
     height: 50%;
     margin-top: 70px;
 
@@ -97,6 +108,10 @@ p {
     background-color: #d01c28;
     color: #fff;
 }
+.shop-now:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 button.category{
     border: 2px solid #423c3c;
 }
@@ -104,6 +119,11 @@ button.category{
 .category {
     background-color: #fff;
     color: #000;
+}
+
+.category:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .available {
@@ -126,17 +146,79 @@ button.category{
     width: 400px;
 }
 
+nav .openmenu{
+    display: none;
+    font-size: 2rem;
+    margin: 20px;
+    cursor: pointer;
+}
+
+
+nav .mainmenu .closemenu {
+    font-size: 2rem;
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    nav .mainmenu{
+         height: 100vh;
+         position: fixed;
+         top:0;
+         right: 0;
+         left: 0;
+         z-index: 12;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background-color: #fff;
+         transition: top 1s ease;
+         display: none;
+    }
+
+    nav .mainmenu .closemenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    nav .mainmenu li a:hover{
+        font-size: 1.6rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: black;
+        color: beige;
+
+    }
+
+    nav .openmenu{
+        display: block;
+    }
+    
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
         text-align: center;
+        margin-right: 50px;
+    }
+
+    button.category{
+        margin-top: 10px;
     }
 
     .image img {
         width: 100%;
+        height: 50%;
+        margin: 4%;
         margin-top: 30px;
         margin-left: 60px;
         
+    }
+    .logo{
+        margin-left: inherit;
     }
 }
 
